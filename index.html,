@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg AFK Cloud</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .app {
+      max-width: 420px;
+      margin: 30px auto;
+    }
+
+    .logo {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      color: #76e6b2;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aebbd0;
+    }
+
+    .card {
+      background: #1d293b;
+      padding: 20px;
+      margin-top: 22px;
+      border-radius: 16px;
+      border: 1px solid #344258;
+    }
+
+    .status {
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #76e6b2;
+      color: #101827;
+    }
+
+    .secondary {
+      background: #344258;
+      color: white;
+    }
+
+    .note {
+      color: #aebbd0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="logo">🥚☁️</div>
+    <h1>Egg AFK Cloud</h1>
+    <p class="subtitle">Your cloud gaming dashboard</p>
+
+    <section class="card">
+      <h2>Cloud Android</h2>
+      <p>Status: <span class="status" id="status">
+        Not connected
+      </span></p>
+
+      <button class="primary" onclick="connectCloud()">
+        Connect Cloud
+      </button>
+
+      <button class="secondary" onclick="checkStatus()">
+        Check Status
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>Roblox</h2>
+      <p id="robloxStatus">No cloud device connected.</p>
+      <button class="secondary" onclick="openRoblox()">
+        Open Roblox Website
+      </button>
+    </section>
+
+    <section class="card">
+      <h3>Project Information</h3>
+      <p class="note">
+        This is the first dashboard prototype.
+        A real cloud Android server is still needed
+        to run Roblox remotely.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function connectCloud() {
+      document.getElementById("status").textContent =
+        "No server configured";
+
+      alert(
+        "Cloud server is not connected yet. " +
+        "We need to configure a real Android host first."
+      );
+    }
+
+    function checkStatus() {
+      alert(
+        "Dashboard is working. Cloud server status " +
+        "cannot be checked until a server is configured."
+      );
+    }
+
+    function openRoblox() {
+      window.open(
+        "https://www.roblox.com/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+  </script>
+</body>
+</html>
